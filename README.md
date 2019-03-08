@@ -41,7 +41,20 @@ Work to satisfy the tests.
 The tests will exercise that your application conforms to the following:
 
 * `PasswordValidator` class must exist
-  * It must be initialized with a `String`. Failure to initialize with a `String` triggers an error
-  * It must also accept a second parameter, a `Number` which is the minimum
-    length of the password. It should default to 8.
+  * It features a class method called `safe?` that takes one required argument
+    and one optional argument
+    * required; 'a potential password'
+    * optional; a minimum password length, should default to `8`
+  * The `safe?` method should ensure that the potential password:
+    * Contains at least 1 number
+    * Contains at least 1 lower-case letter
+    * Contains at least 1 upper-case letter
+    * Contains one special character: `!#$%&()*+,-./:;<=>?@[]^_{|}~`
+    * Has a length greater than the length parameter
+  * The `safe?` method must make use of the following subroutines
+    *  `self.has_one_lowercase?(potential_password)`
+    *  `self.has_one_uppercase?(potential_password)`
+    *  `self.has_one_number?(potential_password)`
+    *  `self.has_one_special_character?(potential_password)`
+    *  `self.is_long_enough?(potential_password, required_length)`
 

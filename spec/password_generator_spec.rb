@@ -46,4 +46,42 @@ describe "PasswordValidator" do
       expect { PasswordValidator.safe?("Ba1!asdfasdfasdf") }.not_to raise_error
     end
   end
+
+  describe 'subroutines are called by safe?' do
+    it 'and it calls has_one_lowercase? ' do
+      testpw = "TEST"
+      expect(PasswordValidator).to receive(:has_one_lowercase?).with(testpw)
+      expect PasswordValidator.safe?(testpw)
+    end
+
+    it 'and it calls has_one_uppercase? ' do
+      testpw = "Test"
+      expect(PasswordValidator).to receive(:has_one_uppercase?).with(testpw)
+      expect PasswordValidator.safe?(testpw)
+    end
+
+    it 'and it calls has_one_number? ' do
+      testpw = "Te1t"
+      expect(PasswordValidator).to receive(:has_one_number?).with(testpw)
+      expect PasswordValidator.safe?(testpw)
+    end
+
+    it 'and it calls has_one_special_character? ' do
+      testpw = "Te1t!"
+      expect(PasswordValidator).to receive(:has_one_special_character?).with(testpw)
+      expect PasswordValidator.safe?(testpw)
+    end
+
+    it 'and it calls is_long_enough? ' do
+      testpw = "Te1t!asfasdfasdf"
+      expect(PasswordValidator).to receive(:is_long_enough?).with(testpw, 8)
+      expect PasswordValidator.safe?(testpw)
+    end
+
+    it 'and it calls is_long_enough? when length is overridden' do
+      testpw = "Te1t!"
+      expect(PasswordValidator).to receive(:is_long_enough?).with(testpw, 2)
+      expect PasswordValidator.safe?(testpw, 2)
+    end
+  end
 end
