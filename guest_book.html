@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Programming Fan Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/site.css" type="text/css" />
+    <link rel="stylesheet" href="./css/guest_book.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Programming Fan Site</h1>
+      <h2>Guest Book</h2>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./guest_book.html">Guest Book</a></li>
+      </ul>
+    </nav>
+    <p>Please let me know more about you! Sign into my Guest-Book</p>
+    <form action="./guest_book.html" method="get" id="guest-book-form">
+      <label for="guest-name">Your Name:</label>
+      <input type="text" name="guest_name" id="guest-name" value="" />
+
+      <label for="guest-name">Your Favorite Programming Era:</label>
+      <select name="favorite-era" id="guest-favorite-era">
+        <option value="innovators">Innovators</option>
+        <option value="twentieth_century">20th Century</option>
+        <option value="recent">Recent Era</option>
+      </select>
+      <input type="submit" name="submit" id="guest-book-submit" />
+    </form>
+  </body>
+</html>
