@@ -2,11 +2,12 @@
 
 ## Introduction
 
-Welcome to this examination. It aims to assess your proficiency in two areas:
+Welcome to this examination. It aims to assess your proficiency in the
+following areas:
 
 * Basic HTML site design
 * Procedural programming in Ruby
-* Unix / Git / Testing fundamentals
+* Unix / Git / RSpec fundamentals
 
 ## Implementation
 
@@ -17,9 +18,11 @@ UCI and we will run tests to verify your proficiency.
 
 ## Technical Requirements
 
+To retrieve the content you will need to have `git` installed.
+
 You will need to have the `ruby` program and the `bundler` gem installed.
 
-Upon cloning the repo to your local machine, run `bundle install` and ensure
+After cloning the repo to your local machine, run `bundle install` and ensure
 that your application works.
 
 ## Proficiency 1: Basic HTML Site Design
@@ -58,3 +61,8 @@ visually verify the function of this website.
     *  `self.has_one_number?(potential_password)`
     *  `self.has_one_special_character?(potential_password)`
     *  `self.is_long_enough?(potential_password, required_length)`
+
+## Conclusion
+
+Through these two mini-projects you should have demonstrated a basic HTML site
+as well as a basic ability to write procedural Ruby code.
