@@ -8,11 +8,3 @@ body {
     width: 600px;
   }
 }
-
-p.opening {
-  font-weight: bold;
-}
-
-#intro {
-  border-top: 1px solid black;
-}
