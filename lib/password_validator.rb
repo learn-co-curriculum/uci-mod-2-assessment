@@ -1,40 +1,27 @@
-class PasswordValidator
-  class NoLowerCaseLettersError < Exception; end
-  class NoUpperCaseLettersError < Exception; end
-  class NoNumbersError < Exception; end
-  class NoSpecialCharactersError < Exception; end
-  class PasswordTooShortError < Exception; end
+def safe?(test_string, pw_length=8)
+  has_one_lowercase?(test_string) &&
+  has_one_uppercase?(test_string) &&
+  has_one_number?(test_string) &&
+  has_one_special_character?(test_string) &&
+  is_long_enough?(test_string, pw_length)
+end
 
-  def self.safe?(test_string, required_length=8)
-    raise ArgumentError unless test_string
-    has_one_lowercase?(test_string) &&
-    has_one_uppercase?(test_string) &&
-    has_one_number?(test_string) &&
-    has_one_special_character?(test_string) &&
-    is_long_enough?(test_string, required_length)
-  end
+def has_one_lowercase?(potential_password)
+  !!potential_password.match(/[abcdefghijklmnopqrstuvwxyz]/)
+end
 
-  def self.has_one_lowercase?(s)
-    raise NoLowerCaseLettersError unless s.match(/[abcdefghijklmnopqrstuvwxyz]/)
-    true
-  end
+def has_one_uppercase?(potential_password)
+  !!potential_password.match(/[ABCDEFGHIJKLMNOPQRSTUVWXYZ]/)
+end
 
-  def self.has_one_uppercase?(s)
-    raise NoUpperCaseLettersError unless s.match(/[ABCDEFGHIJKLMNOPQRSTUVWXYZ]/)
-    true
-  end
+def has_one_number?(potential_password)
+  !!potential_password.match(/[0-9]/)
+end
 
-  def self.has_one_number?(s)
-    raise NoNumbersError unless s.match(/[0123456789]/)
-    true
-  end
+def has_one_special_character?(potential_password)
+  !!potential_password.match(%r'[!#$%&()*+,-./:;<=>?@\[\]^_{|}~]')
+end
 
-  def self.has_one_special_character?(s)
-    raise NoSpecialCharactersError unless s.match(%r'[!#$%&()*+,-./:;<=>?@\[\]^_{|}~]')
-    true
-  end
-
-  def self.is_long_enough?(s, required_length)
-    raise PasswordTooShortError unless s.length >= required_length
-  end
+def is_long_enough?(potential_password, required_length)
+  potential_password.length >= required_length
 end
