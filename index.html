@@ -1,91 +1,92 @@
-<DOCTYPE>
-<!-- Head -->
-
+<!DOCTYPE HTML>
+<html>
+  <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Programming Fan Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/site.css" type="text/css" />
+    <link rel="stylesheet" href="./css/home.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Programming Fan Site</h1>
+      <h2>Home</h2>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+    <section id="intro">
+      <p class="opening">Do you love <strong>programming</strong>? I sure do! Here are some of my favorite
+      programmers</p>
+    </section>
+    <section id="article-navigation">
+      <ol>
+        <li class="programming-era"><a href="#innovators-era">Innovators</a></li>
+        <li class="programming-era"><a href="#twentiety-century-era">20<sup>th</sup> Century</a></li>
+        <li class="programming-era"><a href="#recent-era">Recent</a></li>
+      </ol>
+    </section>
 
-    <!-- Title --> Programming Fan Site
+    <article id="favorite-programmers">
+      <section id="innovators">
 
-    <!-- Link to an internet-provided bootstrap.min.css file -->
-    <!-- Link to "site.css" stylesheet -->
-    <!-- Link to "home.css" stylesheet -->
+        <a name="innovators-era"></a>
+        <h1>Innovators</h1>
 
-    <!-- Header -->
+        <p>An interesting mix of <em>logicians</em>, <em>mathematicians</em>, and those familiar with
+        the <em><a href="https://en.wikipedia.org/wiki/Jacquard_loom">Jacquard
+          Loom</a></em>.</p>
 
-      <!-- Heading 1 --> Programming Fan Site
-      <!-- Heading 2 --> Home
+        <h2>George Boole</h2>
 
-    <!-- Navigational Element -->
+        <img src="./images/boole.jpg" alt="Image of boole" />
 
-      <!-- Unordered list of links to Home page, About page and Guest Book page -->
+        <p>English logician who invented a logic based around 1's and 0's, we
+        call it "Boolean logic" in his honor.</p>
 
-    <!-- Section with "intro" identifier -->
+        <h2>Charles Baggage</h2>
 
-      <!-- Paragraph with "opening" class and the word "programming" in strong text -->
-      Do you love programming? I sure do! Here are some of my favorite programmers
+        <img src="./images/babbage.jpg" alt="Image of babbage" />
 
-    <!-- Section with "article-navigation" identifier -->
-
-        <!-- Ordered list of links to "innovators-era" section, "twentieth-century-era" section and "recent-era" section -->
-
-    <!-- Article with "favorite-programmers" identifier -->
-
-      <!-- Section with "innovators" identifier -->
-
-        <!-- Anchor tag named "innovators-era" -->
-
-        <!-- Heading 1 --> Innovators
-
-        <!-- Paragraph with the words "logicians," "mathematicians" and  "Jacquard Loom" in emphasis text -->
-        <!-- "Jacquard Loom" is also linked to its corresponding Wikipedia article -->
-        An interesting mix of logicians, mathematicians, and those familiar with the Jacquard Loom.
-
-        <!-- Heading 2 --> George Boole
-
-        <!-- Image tag for Boole -->
-
-        English logician who invented a logic based around 1's and 0's, we
-        call it "Boolean logic" in his honor.
-
-        <!-- Heading 2 --> Charles Babbage
-
-        <!-- Image tag for Babbage -->
-
-        English polymath who built the plans for the difference engine and
+        <p>English polymath who built the plans for the difference engine and
         the analytical engine: machines that would allow for symbolic and
-        generalized computation.
+        generalized computation.</p>
 
-        <!-- Heading 2 --> Ada Lovelace
+        <h2>Ada Lovelace</h2>
 
-        <!-- Image tag for Lovelace -->
+        <img src="./images/ada.jpg" alt="Image of ada" />
 
-        English aristocrat who used her insight in seeing the pattern-based
+        <p>English aristocrat who used her insight in seeing the pattern-based
         Jacquard Looms operate from a "plan" to build a similar "plan" for
         calculating Bernoulli numbers. Died lamentably young. Daughter of George
-        Gordon, Lord Byron.
+        Gordon, Lord Byron.</p>
+      </section>
 
+      <section id="twentieth-century-era">
+        <a name="20th_century"></a>
 
-        <!-- Section with "twentieth-century-era" identifier -->
-        <!-- Anchor tag named "20th_century" -->
+        <h1>20<sup>th</sup> Century</h1>
 
-        <!-- Heading 1 --> 20<sup>th</sup> Century
-
-        Spurred by the World Wars and the Cold War, these individuals helped
+        <p>Spurred by the World Wars and the Cold War, these individuals helped
         prepare our primitive cognitive apparatus to face the challenges of a
-        world in which we swim in data.
+        world in which we swim in data.</p>
 
-        <!-- Heading 2 --> Claude Shannon
+        <h2>Claude Shannon</h2>
 
-        <!-- Image tag for Shannon -->
+        <img src="./images/shannon.jpg" alt="Image of shannon" />
 
-        Pioneer of information theory. Invented the term "bit" as
+        <p>Pioneer of information theory. Invented the term "bit" as
         abbreviation of "binary digit." Worked on numerous secret wartime
-        activities. He loved jazz and played clarinet.
+        activities. He loved jazz and played clarinet.</p>
 
-        <!-- Heading 2 --> Alan Turing
+        <h2>Alan Turing</h2>
 
-        <!-- Image tag for Turing -->
+        <img src="./images/turing.jpg" alt="Image of turing" />
 
-        What a legacy! Built a generalized machine to help break the Enigma
+        <p>What a legacy! Built a generalized machine to help break the Enigma
         cipher. Directly contributed to neutralizing the Nazi war machine in
         order to set the way for Allied victory. Later proposed generalized
         rules of all computers ("Turing Machines") and predicted the chief
@@ -94,54 +95,59 @@
         forced to take hormonal drugs as "chemical castration." This later
         drove him to suicide. Received posthumous apology from HRH Queen
         Elizabeth II. His life was cut short by three-quarters. What might he
-        have given us with another half century to live?
+        have given us with another half century to live?</p>
 
-        <!-- Heading 2 --> Admiral Grace Hopper
+        <h2>Admiral Grace Hopper</h2>
 
-        <!-- Image tag for Hopper -->
+        <img src="./images/hopper.jpg" alt="Image of hopper" />
 
-        Rear Admiral Hopper was a mathematician who was a programmer on one
+        <p>Rear Admiral Hopper was a mathematician who was a programmer on one
         of the earliest computers at Harvard. Later she went on to help devise
         UNIVAC I, the first commercial computer. She also helped build COBOL,
         an early, English-like programming language that set the stage for
         languages like Python, Ruby, etc. She was also a formidable
         communicator of science and technology: she could find a way to
         communicate technological challenges in both mathematics as well as to
-        laypeople, or military brass!
+        laypeople, or military brass!</p>
 
-        <!-- Section with "recent-era" identifier -->
-        <!-- Anchor tag named "recent" -->
+      </section>
 
-        <!-- Heading 1 --> Recent
+      <section id="recent-era">
+        <a name="recent"></a>
+        <h1>Recent</h1>
 
-        While the 20th century saw us gain the ability to brute force
+        <p>While the 20th century saw us gain the ability to brute force
         process data into information, these individuals are leading the way to
         making working with the computer signify something within in the human
-        mind.
+        mind.</p>
 
-        <!-- Heading 2 --> Alan Kay
+        <h2>Alan Kay</h2>
 
-        <!-- Image tag for Kay -->
+        <img src="./images/kay.jpg" alt="Image of kay" />
 
-        At heart, a biologist, Kay realized that the biological metaphor of
+        <p>At heart, a biologist, Kay realized that the biological metaphor of
         "small units of intelligence, working together" was a better model for
-        programming. This is the foundation of "Object-Oriented" programming!
+        programming. This is the foundation of "Object-Oriented" programming!</p>
 
-        <!-- Heading 2 --> Rich Hickey
+        <h2>Rich Hickey</h2>
 
-        <!-- Image tag for Hickey -->
+        <img src="./images/hickey.jpg" alt="Image of hickey" />
 
-        Challenging the chief notion of Object-Orientation, that the world
+        <p>Challenging the chief notion of Object-Orientation, that the world
         is full of states and things, Hickey advocates for the functional
-        mindset in which programs are flows of processes interacting.
+        mindset in which programs are flows of processes interacting.</p>
 
-         <!-- Heading 2 --> Matsumoto Yukihiro
+        <h2>Matsumoto Yukihiro</h2>
 
-        <!-- Image tag for Matsumoto -->
+        <img src="./images/matz.jpg" alt="Image of matz" />
 
-        A beloved programmer and gentle soul. "Matz" created his programming
+        <p>A beloved programmer and gentle soul. "Matz" created his programming
         language, Ruby, to be a language that was fun for the programmer. It
         was designed to help channel joy to programmers. In some way, it
         recalls Marie Kondo's KonMari method of household maintenance. Both hinge on a
-        notion of "joy."
+        notion of "joy."</p>
+      </section>
+    </article>
 
+  </body>
+</html>
