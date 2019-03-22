@@ -40,37 +40,34 @@ requirements.
 
 During development you can use `ruby -run -e httpd . -p 5000` in the repo
 directory to run a local web server.  This should be sufficient to help you
-visually verify the function of this website.
+visually verify the function of this website by visiting http://localhost:5000.
 
 ## Proficiency 2: Procedural Programming in Ruby
 
-We'll be creating a password strength validator Create the following methods at
-the top-level scope i.e. do not embed them within a class. All parameters are
+We'll be creating a password strength validator. Create the following methods
+at the top-level scope. Do not embed them within a `class`. All parameters are
 required for the following methods.
 
-*  `has_one_lowercase?(potential_password)`
-*  `has_one_uppercase?(potential_password)`
-*  `has_one_number?(potential_password)`
-*  `has_one_special_character?(potential_password)`
-*  `is_long_enough?(potential_password, required_length)`
-
+* Specific criterion methods
+  *  `has_one_lowercase?(potential_password)`
+  *  `has_one_uppercase?(potential_password)`
+  *  `has_one_number?(potential_password)`
+  *  `has_one_special_character?(potential_password)`
+  *  `is_long_enough?(potential_password, required_length)`
 * Write a method called `safe?` that takes one required argument and one optional argument
-  * **required**; 'a potential password'
-  * **optional**; a minimum password length, should default to `8`
+  * Method parameters
+    * **required**; 'a potential password'
+    * **optional**; a minimum password length, should default to `8`
+  * The implementation should ensure that the potential password:
+    * contains at least 1 number by calling `has_one_number?`
+    * contains at least 1 lower-case letter by calling `has_one_lowercase?`
+    * contains at least 1 upper-case letter by calling `has_one_uppercase?`
+    * contains one special character: `!#$%&()*+,-./:;<=>?@[]^_{|}~` by calling `has_one_special_character?`
+    * has a length greater than the length parameter, the second argument, by calling `is_long_enough?`
 
-* The `safe?` method should ensure that the potential password:
-  * contains at least 1 number
-  * contains at least 1 lower-case letter
-  * contains at least 1 upper-case letter
-  * contains one special character: `!#$%&()*+,-./:;<=>?@[]^_{|}~`
-  * has a length greater than the length parameter, the second argument
+* If all conditions are satisfied, return `true`; else, return `false`.
 
-If all conditions are satisfied, return `true`; else, return `false`.
+## Conclusion
 
-The `safe?` method should use the following methods in its calculation:
-
-*  `has_one_lowercase?`
-*  `has_one_uppercase?`
-*  `has_one_number?`
-*  `has_one_special_character?`
-*  `is_long_enough?`
+That's it! If you're reasonably comfortable with HTML authoring and Ruby
+programming you'll have found this a simple task.
