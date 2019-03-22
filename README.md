@@ -2,11 +2,12 @@
 
 ## Introduction
 
-Welcome to this examination. It aims to assess your proficiency in two areas:
+Welcome to this examination. It aims to assess your proficiency in the
+following areas:
 
 * Basic HTML site design
 * Procedural programming in Ruby
-* Unix / Git / Testing fundamentals
+* Unix / Git / RSpec fundamentals
 
 ## Implementation
 
@@ -17,9 +18,11 @@ UCI and we will run tests to verify your proficiency.
 
 ## Technical Requirements
 
+To retrieve the content you will need to have `git` installed.
+
 You will need to have the `ruby` program and the `bundler` gem installed.
 
-Upon cloning the repo to your local machine, run `bundle install` and ensure
+After cloning the repo to your local machine, run `bundle install` and ensure
 that your application works.
 
 ## Proficiency 1: Basic HTML Site Design
@@ -41,20 +44,33 @@ visually verify the function of this website.
 
 ## Proficiency 2: Procedural Programming in Ruby
 
-* `PasswordValidator` class must exist
-  * It features a class method called `safe?` that takes one required argument
-    and one optional argument
-    * required; 'a potential password'
-    * optional; a minimum password length, should default to `8`
-  * The `safe?` method should ensure that the potential password:
-    * Contains at least 1 number
-    * Contains at least 1 lower-case letter
-    * Contains at least 1 upper-case letter
-    * Contains one special character: `!#$%&()*+,-./:;<=>?@[]^_{|}~`
-    * Has a length greater than the length parameter
-  * The `safe?` method must make use of the following subroutines
-    *  `self.has_one_lowercase?(potential_password)`
-    *  `self.has_one_uppercase?(potential_password)`
-    *  `self.has_one_number?(potential_password)`
-    *  `self.has_one_special_character?(potential_password)`
-    *  `self.is_long_enough?(potential_password, required_length)`
+We'll be creating a password strength validator Create the following methods at
+the top-level scope i.e. do not embed them within a class. All parameters are
+required for the following methods.
+
+*  `has_one_lowercase?(potential_password)`
+*  `has_one_uppercase?(potential_password)`
+*  `has_one_number?(potential_password)`
+*  `has_one_special_character?(potential_password)`
+*  `is_long_enough?(potential_password, required_length)`
+
+* Write a method called `safe?` that takes one required argument and one optional argument
+  * **required**; 'a potential password'
+  * **optional**; a minimum password length, should default to `8`
+
+* The `safe?` method should ensure that the potential password:
+  * contains at least 1 number
+  * contains at least 1 lower-case letter
+  * contains at least 1 upper-case letter
+  * contains one special character: `!#$%&()*+,-./:;<=>?@[]^_{|}~`
+  * has a length greater than the length parameter, the second argument
+
+If all conditions are satisfied, return `true`; else, return `false`.
+
+The `safe?` method should use the following methods in its calculation:
+
+*  `has_one_lowercase?`
+*  `has_one_uppercase?`
+*  `has_one_number?`
+*  `has_one_special_character?`
+*  `is_long_enough?`
