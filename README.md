@@ -40,3 +40,21 @@ directory to run a local web server.  This should be sufficient to help you
 visually verify the function of this website.
 
 ## Proficiency 2: Procedural Programming in Ruby
+
+* `PasswordValidator` class must exist
+  * It features a class method called `safe?` that takes one required argument
+    and one optional argument
+    * required; 'a potential password'
+    * optional; a minimum password length, should default to `8`
+  * The `safe?` method should ensure that the potential password:
+    * Contains at least 1 number
+    * Contains at least 1 lower-case letter
+    * Contains at least 1 upper-case letter
+    * Contains one special character: `!#$%&()*+,-./:;<=>?@[]^_{|}~`
+    * Has a length greater than the length parameter
+  * The `safe?` method must make use of the following subroutines
+    *  `self.has_one_lowercase?(potential_password)`
+    *  `self.has_one_uppercase?(potential_password)`
+    *  `self.has_one_number?(potential_password)`
+    *  `self.has_one_special_character?(potential_password)`
+    *  `self.is_long_enough?(potential_password, required_length)`
