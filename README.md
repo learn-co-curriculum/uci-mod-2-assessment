@@ -32,7 +32,7 @@ they're broken. Return the web site to normal function.
 
 Also, the team was able to recover a series of tests that make sure the basic
 function of the site is working. As you're building out the site, be sure to
-run: `rspec spec/build-site.rb`. This will ensure that you meet the basic
+run: `rspec spec/build-site_spec.rb`. This will ensure that you meet the basic
 requirements.
 
 During development you can use `ruby -run -e httpd . -p 5000` in the repo
