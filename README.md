@@ -27,20 +27,46 @@ that your application works.
 
 ## Proficiency 1: Basic HTML Site Design
 
-Disaster has struck! Our web site was not under Git protection and, in a
-recent hard drive failure, has been lost.
+Create a web page in `index.html` with the following characteristics:
 
-Fortunately our IT team has been able to cobble the files back together, but
-they're broken. Return the web site to normal function.
+* Validates with a W3C Validator
+* Valid HTML 5 DOCTYPE
+* Features a title
+* Links to an external CSS sheet
+* Create two sections
+  * The first section should features a top-level header with the content: "Ruby"
+    * It should _also_ feature a sub-heading (`h2`) with "A language for Joy"
+  * The second section should features a top-level header with the content: "JavaScript"
+    * It should _also_ feature a sub-heading (`h2`) with "A language for the Web"
+* Each of the sections above should have a navigational area
+  * The "Ruby" section's navigation should provide links to:
+    * Ruby's Homepage (use this as the link body): `https://www.ruby-lang.org/en/`
+    * Ruby's Documentation (use this as the link body): `https://www.ruby-lang.org/en/documentation/`
+  * The "JavaScript" section's navigation should provide links to:
+    * MDN: `https://developer.mozilla.org/en-US/docs/Web/JavaScript`
+* Each `section` should have an identity attribute set to either `ruby` or
+  `javascript` as appropriate to the `section`
+* Write a short paragraph about yourself: Be sure to provide your name and the
+  number of weeks you've been programming
+  * Make your name bold
+  * Make the number of weeks you've been programming italicized
+* Create a unordered list of your three favorite things
+  * Each item in the list should be of class-type `hobby`
+* Include an image that you link to from the web
+* Create a third section with id `guest-book`
+  * Label a text field with "Guest Name:" text
+  * Include a submit button
+  * For the form `action`, point to `http://example.com/guest-list`
+* Ensure the CSS specifies that the `id` of `guest-book` has a background-color
+  of `smoke`
+* Ensure the CSS document specifies that the `id` of `guest-book` has a background-color
+  of `smoke`
+* Ensure the CSS document specifies that the `class` of `hobby` has a
+  foreground color of `#f442d9`
 
-Also, the team was able to recover a series of tests that make sure the basic
-function of the site is working. As you're building out the site, be sure to
-run: `rspec spec/build-site_spec.rb`. This will ensure that you meet the basic
-requirements.
-
-During development you can use `ruby -run -e httpd . -p 5000` in the repo
-directory to run a local web server.  This should be sufficient to help you
-visually verify the function of this website by visiting http://localhost:5000.
+> **TIP**: During development you can use `ruby -run -e httpd . -p 5000` in the repo
+> directory to run a local web server.  This should be sufficient to help you
+> visually verify the function of this website by visiting http://localhost:5000.
 
 ## Proficiency 2: Procedural Programming in Ruby
 
