@@ -1,4 +1,4 @@
-# UCI Extension Module 3 Entrance Exam
+# UCI Module 2 Assessment
 
 ## Introduction
 
